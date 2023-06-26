@@ -1,27 +1,110 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.content__title {
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+    font-weight: 500;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.clear-btn {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+.copy_btn {
+    color: var(--ion-color-success);
+    transition: all 0.2s ease;
+    cursor: pointer;
 
-  color: #8c8c8c;
-
-  margin: 0;
+    &:hover {
+        color: var(--ion-color-medium);
+    }
 }
 
-#container a {
-  text-decoration: none;
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    &_card {
+        width: clamp(320px, 30rem, 400px);
+    }
 }
+.generated {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--ion-color-light-shade);
+
+    &_pass {
+        font-family: var(--font-kanit);
+        font-size: 1rem;
+        font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+        color: var(--ion-color-medium-tint);
+        letter-spacing: 0.05rem;
+
+        &.enabled-true {
+            color: var(--ion-color-light);
+        }
+    }
+}
+
+.generation {
+
+    &_length {
+        margin-bottom: 1rem;
+
+        &__range {
+            width: 100%;
+            display: block;
+        }
+
+        &_label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__characters {
+            font-family: var(--font-kanit);
+            font-size: 1.75rem;
+            color: var(--ion-color-success);
+        }
+    }
+
+    &_options {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    &_strenght {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        padding: 0.5rem;
+        background-color: rgba(var(--ion-color-light-rgb),0.1);
+
+        &__text {
+            font-family: var(--font-kanit);
+            text-transform: uppercase;
+        }
+        &__icon {
+            width: 50px;
+            height: 35px;
+        }
+    }
+}
+
+:host .teste svg .ionicon-fill-none {
+    stroke: green !important;
+    fill: green !important;
+}
+
+
+ion-checkbox {
+    --checkbox-background-checked: var(--ion-color-success);
+    --border-color-checked: var(--ion-color-success);
+  }

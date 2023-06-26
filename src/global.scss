@@ -24,3 +24,12 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+.ion-color-darkish {
+    --ion-color-base: var(--ion-color-darkish);
+    --ion-color-base-rgb: var(--ion-color-darkish-rgb);
+    --ion-color-contrast: var(--ion-color-darkish-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-darkish-contrast-rgb);
+    --ion-color-shade: var(--ion-color-darkish-shade);
+    --ion-color-tint: var(--ion-color-darkish-tint);
+}
